@@ -6,132 +6,132 @@
   },
   {
     "id": "2",
-    "s": "AL",
-    "n": "Alagoas"
+    "sigla": "AL",
+    "nome": "Alagoas"
   },
   {
     "id": "3",
-    "s": "AM",
-    "n": "Amazonas"
+    "sigla": "AM",
+    "nome": "Amazonas"
   },
   {
     "id": "4",
-    "s": "AP",
-    "n": "Amapá"
+    "sigla": "AP",
+    "nome": "Amapá"
   },
   {
     "id": "5",
-    "s": "BA",
-    "n": "Bahia"
+    "sigla": "BA",
+    "nome": "Bahia"
   },
   {
     "id": "6",
-    "s": "CE",
-    "n": "Ceará"
+    "sigla": "CE",
+    "nome": "Ceará"
   },
   {
     "id": "7",
-    "s": "DF",
-    "n": "Distrito Federal"
+    "sigla": "DF",
+    "nome": "Distrito Federal"
   },
   {
     "id": "8",
-    "s": "ES",
-    "n": "Espírito Santo"
+    "sigla": "ES",
+    "nome": "Espírito Santo"
   },
   {
     "id": "9",
-    "s": "GO",
-    "n": "Goiás"
+    "sigla": "GO",
+    "nome": "Goiás"
   },
   {
     "id": "10",
-    "s": "MA",
-    "n": "Maranhão"
+    "sigla": "MA",
+    "nome": "Maranhão"
   },
   {
     "id": "11",
-    "s": "MG",
-    "n": "Minas Gerais"
+    "sigla": "MG",
+    "nome": "Minas Gerais"
   },
   {
     "id": "12",
-    "s": "MS",
-    "n": "Mato Grosso do Sul"
+    "sigla": "MS",
+    "nome": "Mato Grosso do Sul"
   },
   {
     "id": "13",
-    "s": "MT",
-    "n": "Mato Grosso"
+    "sigla": "MT",
+    "nome": "Mato Grosso"
   },
   {
     "id": "14",
-    "s": "PA",
-    "n": "Pará"
+    "sigla": "PA",
+    "nome": "Pará"
   },
   {
     "id": "15",
-    "s": "PB",
-    "n": "Paraíba"
+    "sigla": "PB",
+    "nome": "Paraíba"
   },
   {
     "id": "16",
-    "s": "PE",
-    "n": "Pernambuco"
+    "sigla": "PE",
+    "nome": "Pernambuco"
   },
   {
     "id": "17",
-    "s": "PI",
-    "n": "Piauí"
+    "sigla": "PI",
+    "nome": "Piauí"
   },
   {
     "id": "18",
-    "s": "PR",
-    "n": "Paraná"
+    "sigla": "PR",
+    "nome": "Paraná"
   },
   {
     "id": "19",
-    "s": "RJ",
-    "n": "Rio de Janeiro"
+    "sigla": "RJ",
+    "nome": "Rio de Janeiro"
   },
   {
     "id": "20",
-    "s": "RN",
-    "n": "Rio Grande do Norte"
+    "sigla": "RN",
+    "nome": "Rio Grande do Norte"
   },
   {
     "id": "21",
-    "s": "RO",
-    "n": "Rondônia"
+    "sigla": "RO",
+    "nome": "Rondônia"
   },
   {
     "id": "22",
-    "s": "RR",
-    "n": "Roraima"
+    "sigla": "RR",
+    "nome": "Roraima"
   },
   {
     "id": "23",
-    "s": "RS",
-    "n": "Rio Grande do Sul"
+    "sigla": "RS",
+    "nome": "Rio Grande do Sul"
   },
   {
     "id": "24",
-    "s": "SC",
-    "n": "Santa Catarina"
+    "sigla": "SC",
+    "nome": "Santa Catarina"
   },
   {
     "id": "25",
-    "s": "SE",
-    "n": "Sergipe"
+    "sigla": "SE",
+    "nome": "Sergipe"
   },
   {
     "id": "26",
-    "s": "SP",
-    "n": "São Paulo"
+    "sigla": "SP",
+    "nome": "São Paulo"
   },
   {
     "id": "27",
-    "s": "TO",
-    "n": "Tocantins"
+    "sigla": "TO",
+    "nome": "Tocantins"
   }
 ]

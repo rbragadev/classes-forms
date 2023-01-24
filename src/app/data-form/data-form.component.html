@@ -106,13 +106,16 @@
 
       <div class="col-md-3">
         <label for="estado" class="control-label">Estado</label>
-        <input
-          type="text"
+        <select
+          name="estado"
+          id="estado"
           class="form-control"
           formControlName="estado"
-          id="estado"
-          name="estado"
-        />
+        >
+          <option *ngFor="let estado of estados | async" [value]="estado.sigla">
+            {{ estado.nome }}
+          </option>
+        </select>
       </div>
     </div>
   </div>
