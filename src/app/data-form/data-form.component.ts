@@ -8,6 +8,7 @@ import {
 } from '@angular/forms';
 import { map } from 'rxjs/operators';
 import { EstadosBr } from '../shared/models/estadosbr.model';
+import { ConsultaCepService } from '../shared/services/consulta-cep.service';
 import { DropdownService } from '../shared/services/dropdown.service';
 
 @Component({
@@ -22,13 +23,14 @@ export class DataFormComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private httpClient: HttpClient,
-    private dropdownService: DropdownService
+    private dropdownService: DropdownService,
+    private cepService: ConsultaCepService
   ) {}
 
   ngOnInit(): void {
-    this.dropdownService.getEstadosBr().subscribe((dados) => {
-      this.estados = dados;
-      console.log(dados);
+    this.dropdownService.getEstadosBr().subscribe((res) => {
+      this.estados = res;
+      console.log(res);
     });
     /* Usando o form group
     this.formulario = new FormGroup({
@@ -53,20 +55,12 @@ export class DataFormComponent implements OnInit {
   }
 
   consultaCEP() {
-    let cep = this.formulario.get('endereco.cep')?.value;
-    console.log(cep);
-    //Nova variável "cep" somente com dígitos.
-    cep = cep.replace(/\D/g, '');
-    //Verifica se campo cep possui valor informado.
-    if (cep != '') {
-      var validacep = /^[0-9]{8}$/;
-      if (validacep.test(cep)) {
-        //Consulta o webservice viacep.com.br/
-        this.httpClient
-          .get(`https://viacep.com.br/ws/${cep}/json`)
-          .pipe(map((dados) => dados))
-          .subscribe((dados) => this.popularDadosForm(dados));
-      }
+    const cep = this.formulario.get('endereco.cep')?.value;
+
+    if (cep !== '' && cep != null) {
+      this.cepService
+        .consultaCEP(cep)
+        .subscribe((dados) => this.popularDadosForm(dados));
     }
   }
 
