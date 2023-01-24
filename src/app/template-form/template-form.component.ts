@@ -11,7 +11,7 @@ export class TemplateFormComponent {
     email: 'raffael.info@gmail.com',
   };
   onSubmit(form: any) {
-    console.log(form.value);
+    console.log(form);
     console.log(this.usuario);
   }
 }
