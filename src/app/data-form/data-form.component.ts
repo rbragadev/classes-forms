@@ -78,16 +78,31 @@ export class DataFormComponent implements OnInit {
 
   onSubmit() {
     console.log(this.formulario.value);
-    this.httpClient
-      .post('https://httpbin.org/post', JSON.stringify(this.formulario.value))
-      .pipe(map((data) => data))
-      .subscribe(
-        (data) => {
-          console.log(data); //reseta form
-          this.formulario.reset();
-        },
-        (error: any) => alert('erro')
-      );
+    if (this.formulario.valid) {
+      this.httpClient
+        .post('https://httpbin.org/post', JSON.stringify(this.formulario.value))
+        .pipe(map((data) => data))
+        .subscribe(
+          (data) => {
+            console.log(data); //reseta form
+            this.formulario.reset();
+          },
+          (error: any) => alert('erro')
+        );
+    } else {
+      this.verificaValidationsForm(this.formulario);
+    }
+  }
+
+  verificaValidationsForm(formGroup: FormGroup) {
+    Object.keys(formGroup.controls).forEach((campo) => {
+      console.log(campo);
+      const controle = formGroup.get(campo);
+      controle?.markAsDirty();
+      if (controle instanceof FormGroup) {
+        this.verificaValidationsForm(controle);
+      }
+    });
   }
 
   resetar() {
