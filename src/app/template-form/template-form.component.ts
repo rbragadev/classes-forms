@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { data } from 'jquery';
 import { map } from 'rxjs/operators';
 
 @Component({
@@ -16,8 +17,13 @@ export class TemplateFormComponent {
   constructor(private httpClient: HttpClient) {}
 
   onSubmit(form: any) {
-    console.log(form);
-    console.log(this.usuario);
+    //console.log(form);
+    //console.log(this.usuario);
+
+    this.httpClient
+      .post('https://httpbin.org/post', JSON.stringify(form.value))
+      .pipe(map((data) => data))
+      .subscribe((data) => console.log(data));
   }
 
   consultaCEP(cep: string, form: any) {
