@@ -134,6 +134,23 @@
         </option>
       </select>
     </div>
+
+    <div class="col-md-4">
+      <label for="tecnologias" class="control-label">tecnologias</label>
+      <select
+        class="form-control"
+        id="tecnologias"
+        formControlName="tecnologias"
+        multiple
+      >
+        <option
+          *ngFor="let tecnologia of tecnologias"
+          [value]="tecnologia.nome"
+        >
+          {{ tecnologia.desc }}
+        </option>
+      </select>
+    </div>
   </div>
 
   <button type="submit" class="btn btn-primary">Submit</button>
