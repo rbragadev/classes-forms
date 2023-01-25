@@ -67,6 +67,10 @@ export class DataFormComponent implements OnInit {
       termos: [null, Validators.pattern('true')],
       frameworks: this.buildFrameworks(),
     });
+
+    this.formulario
+      .get('endereco.cep')
+      ?.valueChanges.subscribe((value) => console.log(value));
   }
 
   buildFrameworks() {
