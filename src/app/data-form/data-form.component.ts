@@ -24,6 +24,7 @@ export class DataFormComponent implements OnInit {
   cargos!: any[];
   tecnologias!: any[];
   newsletterOp!: any[];
+  frameworks = ['angular', 'react', 'vue'];
 
   constructor(
     private formBuilder: FormBuilder,
@@ -64,7 +65,21 @@ export class DataFormComponent implements OnInit {
       tecnologias: [null],
       newsletter: ['s'],
       termos: [null, Validators.pattern('true')],
+      frameworks: this.buildFrameworks(),
     });
+  }
+
+  buildFrameworks() {
+    const values = this.frameworks.map((v) => new FormControl(false));
+
+    return this.formBuilder.array(values);
+
+    /*return [
+      new FormControl(false),
+      new FormControl(false),
+      new FormControl(false),
+
+    ]*/
   }
 
   consultaCEP() {
@@ -93,6 +108,7 @@ export class DataFormComponent implements OnInit {
 
   onSubmit() {
     console.log(this.formulario.value);
+
     if (this.formulario.valid) {
       this.httpClient
         .post('https://httpbin.org/post', JSON.stringify(this.formulario.value))
